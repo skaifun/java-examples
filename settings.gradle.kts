@@ -6,3 +6,4 @@
  */
 
 rootProject.name = "java-examples"
+include("springboot-websocket-with-handler")
