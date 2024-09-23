@@ -1,0 +1,18 @@
+### WebSocket-Test
+WEBSOCKET ws://localhost:8080/ws/hello
+Content-Type: application/json
+
+===
+{
+    "first_name": "John",
+    "last_name": "Doe",
+    "age": 23,
+    "email": "johndoe@example.org"
+}
+=== wait-for-server
+
+> {%
+    response.body.onEachMessage((message) => {
+        client.assert(message.startsWith("Echo: "), "Server return with echo");
+    })
+%}
