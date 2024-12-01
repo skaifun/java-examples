@@ -6,3 +6,4 @@
  */
 
 rootProject.name = "java-examples"
+include("spring-boot-logging-desensitization")
